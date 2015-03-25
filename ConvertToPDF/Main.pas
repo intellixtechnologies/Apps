@@ -58,7 +58,7 @@ oWB := Doc.ActiveSheet;
 oWB.ExportAsFixedFormat(0,Edit2.Text);
 Word.quit;
 end
-else if (ExtractFileExt(Edit1.Text) = '.ppt') then
+else if (ExtractFileExt(Edit1.Text) = '.ppt') OR (ExtractFileExt(Edit1.Text) = '.pptx') then
 begin
 Word := CreateOLEObject('PowerPoint.Application');
 Word.Visible := True;
