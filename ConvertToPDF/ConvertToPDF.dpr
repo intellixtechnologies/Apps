@@ -2,13 +2,16 @@ program ConvertToPDF;
 
 uses
   Vcl.Forms,
-  Main in 'Main.pas' {Form1};
+  Main in 'Main.pas' {Form1},
+  Vcl.Themes,
+  Vcl.Styles;
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  TStyleManager.TrySetStyle('Metropolis UI Black');
+  Application.CreateForm(TmainFrm, mainFrm);
   Application.Run;
 end.
